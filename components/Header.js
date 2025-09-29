@@ -31,7 +31,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center space-x-6">
           <a href="#" className="text-white hover:text-gray-300 transition-colors">Login</a>
           <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
-            Start free trial
+            Start free trials
           </button>
         </div>
 
