@@ -27,14 +27,14 @@ export default function CTA() {
           {/* Headline */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 sm:mb-6">
             <span className="text-white">Sign up today and unlock</span>{' '}
-            <span className="text-green-400">AI-powered</span>{' '}
+            <span className="text-[#8024d1]">AI-powered</span>{' '}
             <span className="text-white">cart recovery for free.</span>
           </h1>
           
           {/* CTA Button and Contact Info in Flex */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
             {/* CTA Button */}
-            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl flex items-center gap-2 sm:gap-3 transition-colors duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base">
+            <button className="bg-[#8024d1] hover:bg-[#6b1fb0] text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl flex items-center gap-2 sm:gap-3 transition-colors duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base">
               <span>Start Free Trial</span>
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
