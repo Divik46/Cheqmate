@@ -18,7 +18,7 @@ module.exports = {
         foreground: '#ffffff',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
       },
       animation: {
         'hue-rotate': 'hue-rotate 20s linear infinite',

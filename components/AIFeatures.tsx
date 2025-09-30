@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 // SVG Icons for each feature - matching the design description
 const SpeedIcon = () => (
@@ -84,42 +85,42 @@ const SearchIcon = () => (
 
 const features = [
   {
-    icon: <SpeedIcon />,
+    icon: '/icons/tracking.png',
     title: "Cart Tracking",
     description: "Track, monitor incomplete purchases in real-time"
   },
   {
-    icon: <NetworkIcon />,
+    icon: '/icons/email.png',
     title: "Automated Reminder Emails/Notifications",
     description: "Automatically send timely reminders to customers and Reduce manual work with follow-up campaigns "
   },
   {
-    icon: <IOSIcon />,
+    icon: '/icons/envelope.png',
     title: "Personalized Messages",
     description: "Boost engagement and trust with tailored messages"
   },
   {
-    icon: <EncryptionIcon />,
+    icon: '/icons/voucher.png',
     title: "Discount / Coupon Integration",
     description: "Create urgency with special time-limited offers"
   },
   {
-    icon: <CalendarIcon />,
+    icon: '/icons/checklist.png',
     title: "Multiple Follow-up Sequences",
     description: "Create urgency with stock alerts without bombarding customers."
   },
   {
-    icon: <PublishingIcon />,
+    icon: '/icons/network-connection.png',
     title: " Multi-Channel Support",
     description: "Reach customers via Email, SMS, WhatsApp, or Push Notifications"
   },
   {
-    icon: <CaptureIcon />,
+    icon: '/icons/ai-powered-models.png',
     title: "AI-Powered Abandonment Prediction",
     description: "Predict drop-offs before they happen."
   },
   {
-    icon: <SearchIcon />,
+    icon: '/icons/analytics.png',
     title: "Analytics & Reporting",
     description: "Track abandoned vs. recovered carts in real-time."
   }
@@ -137,7 +138,7 @@ export default function AIFeatures() {
             const isFirstRow = index < 4;
             const isSecondRow = index >= 4;
             
-            let borderClasses = "border-white/10 hover:border-white/20";
+            let borderClasses = "border-white/10 hover:border-blue-400/40";
             if (isFirstRow) {
               borderClasses += " border-l border-r border-b";
             } else if (isSecondRow) {
@@ -149,16 +150,17 @@ export default function AIFeatures() {
             return (
             <div 
               key={index}
-              className={`bg-primary p-4 sm:p-6 hover:bg-white/5 transition-all duration-300 group ${borderClasses}`}
+              className={`relative overflow-hidden bg-primary p-4 sm:p-6 hover:bg-blue-500/10 hover:shadow-xl hover:shadow-blue-500/20 hover:ring-1 hover:ring-blue-400/40 transition-all duration-300 group ${borderClasses}`}
             >
+              <div className="pointer-events-none absolute -inset-1 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-r from-blue-500/0 via-blue-500/20 to-blue-500/0 blur-2xl" />
               <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 h-full">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-white/90 group-hover:text-white transition-colors duration-300">
-                  {feature.icon}
+                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-white/90 group-hover:text-blue-400 transition-colors duration-300 group-hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.6)] group-hover:-translate-y-2" style={{ transition: 'transform 300ms' }}>
+                  <Image src={feature.icon} alt={feature.title} width={48} height={48} className="w-10 h-10 sm:w-12 sm:h-12 object-contain transition-transform duration-300 group-hover:scale-110" />
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-white/95 transition-colors duration-300">
+                <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-blue-300 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-white/70 group-hover:text-white/80 leading-relaxed transition-colors duration-300">
+                <p className="text-xs sm:text-sm text-white/70 group-hover:text-blue-200 leading-relaxed transition-colors duration-300">
                   {feature.description}
                 </p>
               </div>

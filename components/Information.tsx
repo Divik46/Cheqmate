@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Information() {
   return (
-    <section className="min-h-screen py-16 sm:py-20 px-4" style={{background: 'linear-gradient(135deg, #030014 0%, #030014 50%, #000000 100%)'}}>
+    <section className=" py-16 sm:py-[100px] px-4" style={{background: 'linear-gradient(135deg, #030014 0%, #030014 50%, #000000 100%)'}}>
       <div className="max-w-6xl mx-auto">
         {/* Research and reading tag */}
         <div className="text-center mb-6 sm:mb-8">

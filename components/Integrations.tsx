@@ -9,7 +9,7 @@ export default function Integrations() {
           <p className="text-gray-400 text-base sm:text-lg px-4">See how our platform compares to traditional cart recovery tools</p>
         </div>
         
-        <div className="backdrop-blur-3xl bg-white/10 border border-white/20 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:rounded-xl sm:before:rounded-2xl before:pointer-events-none relative">
+        <div className="relative backdrop-blur-3xl backdrop-saturate-150 bg-white/8 border border-white/20 ring-1 ring-white/25 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl shadow-[0_10px_40px_rgba(17,24,39,0.45)] before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/12 before:to-white/0 before:opacity-80 before:rounded-xl sm:before:rounded-2xl before:pointer-events-none after:absolute after:inset-0 after:rounded-xl sm:after:rounded-2xl after:pointer-events-none after:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.25)]">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px]">
               <thead>

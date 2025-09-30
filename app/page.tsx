@@ -6,6 +6,7 @@ import Meetings from '@/components/Meetings'
 import Integrations from '@/components/Integrations'
 import Testimonials from '@/components/Testimonials'
 import CTA from '@/components/CTA'
+import Blog from '@/components/Blog'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Meetings />
       <Integrations />
       <Testimonials />
+      {/* <Blog /> */}
       <CTA />
     </main>
   )

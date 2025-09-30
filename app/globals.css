@@ -2,15 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Subtle float animation for icon containers */
+@keyframes float-y {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
 @layer base {
   :root {
     --color-brand: #007aff;
-  }
-  
-  html {
-    font-family: 'Inter', system-ui, sans-serif;
   }
   
   body {
