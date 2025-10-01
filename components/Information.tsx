@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function Information() {
   return (
     <section className=" py-16 sm:py-[100px] px-4" style={{background: 'linear-gradient(135deg, #030014 0%, #030014 50%, #000000 100%)'}}>

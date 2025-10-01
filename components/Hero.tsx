@@ -1,4 +1,6 @@
 "use client";
+import GalaxyBackground from "@/components/GalaxyBackground";
+
 
 import { useState } from "react";
 import { Play, Search, Mic, PenTool, List, CheckSquare, MapPin, Pin, Share, Clock, ChevronLeft, ChevronRight } from "lucide-react";
@@ -8,6 +10,7 @@ export default function Hero() {
 
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative overflow-hidden pt-16 sm:pt-20 md:pt-32 lg:pt-52">
+       <GalaxyBackground density={1.2} hueShift={240} />
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-contain bg-center bg-no-repeat z-0"
@@ -27,7 +30,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
         {/* New Feature Banner */}
         <span className="text-xs sm:text-sm text-purple-300 border border-purple-400 rounded-full px-3 py-1 inline-block mb-4 sm:mb-6">
-          ✨ New: Our AI integration just landed
+        New: Our AI integration just landed
         </span>
 
         {/* Main Heading */}
@@ -195,7 +198,7 @@ export default function Hero() {
             <iframe
               className="w-full aspect-video"
               // src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-              src="https://www.youtube.com/embed/J_29Cg4lCzI?autoplay=1"
+              // src="https://www.youtube.com/embed/J_29Cg4lCzI?autoplay=1"
               title="Reflect Demo Video"
               allow="autoplay; encrypted-media"
               allowFullScreen

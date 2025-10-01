@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 
 export default function Meetings() {
   const [isYearly, setIsYearly] = useState(false)
@@ -11,7 +12,7 @@ export default function Meetings() {
       description: "Perfect for individuals, freelancers, small teams starting the Starter plan.",
       monthlyPrice: 30,
       yearlyPrice: 24,
-      icon: "🎁",
+      icon: "/icons/birthday-party-3d-icon.png",
       features: [
         "Maximum 1 User Services",
         "Basic Dashboard Access", 
@@ -27,7 +28,7 @@ export default function Meetings() {
       description: "Best for growing businesses that need more power and flexibility.",
       monthlyPrice: 49,
       yearlyPrice: 39,
-      icon: "📄",
+      icon: "/icons/3d-business-briefcase.png",
       features: [
         "Maximum 3 User Services",
         "Basic Dashboard Access",
@@ -43,7 +44,7 @@ export default function Meetings() {
       description: "Tailored for large teams and complex needs for SaaS services.",
       monthlyPrice: 98,
       yearlyPrice: 78,
-      icon: "💎",
+      icon: "/icons/vector-shining-diamond-illustration.png",
       features: [
         "Maximum 7 User Services",
         "Basic Dashboard Access",
@@ -57,7 +58,7 @@ export default function Meetings() {
   ]
 
   return (
-    <section className="min-h-screen py-16 sm:py-20 px-4 bg-black">
+    <section id="pricing" className="min-h-screen py-16 sm:py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -108,13 +109,16 @@ export default function Meetings() {
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.name}
-              className={`relative rounded-xl sm:rounded-2xl p-6 sm:p-8 ${
+              className={`relative rounded-xl sm:rounded-2xl p-6 sm:p-8 backdrop-blur-md border border-white/10 hover:border-purple-400/50 transition-all duration-300 group ${
                 plan.popular 
-                  ? 'text-white' 
-                  : 'bg-gray-800 text-white'
+                  ? 'text-white bg-purple-500/20 -mt-4 sm:-mt-6' 
+                  : 'bg-white/5 text-white'
               }`}
-              style={plan.popular ? {backgroundColor: '#6b21a8'} : {}}
+              style={plan.popular ? {backgroundColor: 'rgba(107, 33, 168, 0.2)'} : {}}
             >
+              {/* Animated border effect */}
+              <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-purple-500/0 via-purple-400/50 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div className="absolute inset-0 rounded-xl sm:rounded-2xl border border-transparent bg-gradient-to-r from-purple-500/0 via-purple-400/30 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-2 sm:-top-3 right-4 sm:right-6">
@@ -125,7 +129,15 @@ export default function Meetings() {
               )}
 
               {/* Icon */}
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{plan.icon}</div>
+              <div className="mb-3 sm:mb-4">
+                <Image 
+                  src={plan.icon} 
+                  alt={`${plan.name} icon`}
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 sm:w-14 sm:h-14"
+                />
+              </div>
 
               {/* Plan Name */}
               <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">{plan.name}</h3>

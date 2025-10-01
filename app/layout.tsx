@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from 'next'
-import { Nunito } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 import './globals.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-const nunito = Nunito({ subsets: ['latin'], variable: '--font-sans' })
+const rubik = Rubik({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://reflect.app'),
@@ -61,7 +61,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body className={rubik.className}>
         <Header />
         <main>{children}</main>
         <Footer />

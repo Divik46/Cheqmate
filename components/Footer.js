@@ -15,10 +15,10 @@ export default function Footer() {
       title: "Product",
       links: [
         { name: "Features", href: "#features" },
+        { name: "Pricing", href: "#pricing" },
+        { name: "Blog", href: "#blog" },
+        { name: "Contact", href: "#contact" },
         { name: "Integrations", href: "#integrations" },
-        { name: "AI Assistant", href: "#ai" },
-        { name: "Mobile Apps", href: "#mobile" },
-        { name: "API", href: "#api" },
       ]
     }
   ];

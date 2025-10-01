@@ -17,8 +17,12 @@
     --color-brand: #007aff;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
-    @apply bg-primary text-white;
+    @apply bg-primary text-white font-sans;
   }
 }
 

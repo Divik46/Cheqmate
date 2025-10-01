@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CTA() {
   return (
-    <div className="bg-black flex items-center justify-center p-2 sm:pb-[100px]">
+    <div id="contact" className="bg-black flex items-center justify-center p-2 sm:pb-[100px]">
       <div className="relative w-full max-w-6xl rounded-xl sm:rounded-2xl overflow-hidden min-h-[300px] sm:min-h-[350px] py-[60px] sm:py-[60px] backdrop-blur-sm" style={{backgroundColor: '#1b1043'}}>
       {/* Glassy overlay effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent z-10 backdrop-blur-sm"></div>
